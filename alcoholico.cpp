@@ -25,7 +25,7 @@ string Alcoholico::toString()const{
 	return ss.str();
 }
 
-void Alcoholico::cobrar_Impuesto()const{
+void Alcoholico::cobrar_Impuesto(){
 	double impuesto=(getPeso()+getVolumen())*tasa;
 	setPrecio(impuesto);
 }

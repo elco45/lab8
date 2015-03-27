@@ -12,7 +12,7 @@ public:
 	Alcoholico(Alcoholico&);
 	~Alcoholico();
 	virtual string toString()const;
-	virtual void cobrar_Impuesto()const;
+	virtual void cobrar_Impuesto();
 	
 };
 #endif
