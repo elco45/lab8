@@ -6,7 +6,7 @@
 class Lujo: public Productos{
  	double tasa;
  public:
- 	Lujo(double,double,Cliente,double,double);
+ 	Lujo(double,double,Cliente*,double,double);
  	Lujo(Lujo&);
  	~Lujo();
  	virtual string toString()const;

@@ -33,7 +33,7 @@ int main(int argc, char const *argv[])
 		}else if(opcion == 2){//Agregar Productos
 			int random = rand() % lc.size();
 			double volumen, precio, tasa, peso;
-			Cliente persona = lc.at(random);
+			Cliente* persona = lc.at(random);
 			cout << "Volumen: ";
 			cin >> volumen;
 			cout << "Peso: ";

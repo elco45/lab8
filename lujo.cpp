@@ -5,7 +5,7 @@
 #include <string>
 
 using namespace std;
-Lujo::Lujo(double volumen, double peso, Cliente nombre, 
+Lujo::Lujo(double volumen, double peso, Cliente* nombre, 
 	double precio, double tasa): Productos(volumen, peso, nombre, precio),tasa(tasa){
 }
 Lujo::Lujo(Lujo& other): Productos(other),tasa(other.tasa){}
