@@ -1,6 +1,9 @@
 #include "educativo.h"
 #include "productos.h"
 #include "cliente.h"
+#include <sstream>
+using namespace std;
+
 
 Educativo::Educativo(double volumen, double peso, Cliente nombre, 
 	double precio, double tasa): Productos(volumen, peso, nombre, precio),tasa(tasa){
@@ -17,6 +20,6 @@ string Educativo::toString()const{
 void Educativo::cobrar_Impuesto()
 	double impuesto;
 	impuesto=(getVolumen()*tasa);
-	Productos::setPrecio(precio+impuesto);
+	Productos::setPrecio(impuesto);
 	
 }
