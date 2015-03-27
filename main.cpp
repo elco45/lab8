@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 	srand(time(0));
 
 	vector<Productos> lp;
-	vector<Clientes> lc;
+	vector<Cliente> lc;
 
 	int opcion = menu();
 
