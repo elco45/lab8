@@ -29,5 +29,5 @@ double Productos::getPrecio()const{
 	return precio;
 }
 void Productos::setPrecio(double numero){
-	precio = numero;
+	precio += numero;
 }
