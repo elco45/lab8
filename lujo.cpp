@@ -13,7 +13,7 @@ Lujo::Lujo(Lujo& other): Productos(other),tasa(tasa){}
 
 string Lujo::toString()const{
 	stringstream ss;
-	double impuesto=(volumen*tasa)+(peso*tasa);
+	double impuesto=(getVolumen()*tasa)+(getpeso()*tasa);
 	ss=Productos::toString()+"Tipo de impuesto: Lujo\n El impuesto es: "+impuesto;
 }
 
