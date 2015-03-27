@@ -17,6 +17,7 @@ public:
 	double getVolumen()const;
 	double getPeso()const;
 	double getPrecio()const;
+	void setPrecio(double);
 };
 
 #endif			

@@ -28,3 +28,6 @@ double Productos::getPeso()const{
 double Productos::getPrecio()const{
 	return precio;
 }
+void Productos::setPrecio(double numero){
+	precio = numero;
+}
