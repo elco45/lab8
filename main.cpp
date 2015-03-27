@@ -25,7 +25,11 @@ int main(int argc, char const *argv[])
 	{
 
 		if (opcion == 1){//Agregar Clientes
-			
+			string num;
+			for (int i = 0; i < 100; i++){
+				num=i+"";
+				lc.push_back(new cliente(num));
+			}
 		}else if(opcion == 2){//Agregar Productos
 			double volumen, precio, tasa, peso;
 			Cliente persona;
@@ -70,19 +74,25 @@ int menu(){
 		}else{
 			cout<<"Valor invalido!"<<endl;
 		}
-	}
+	}while(true);
 }
 
 int tipoP(){
 	int tipo;
-	cout << "*** Tipo de Producto ***" << endl
-		 << "1. Producto educativo" << endl
-		 << "2. Producto alcoholico" << endl
-		 << "3. Producto de lujo" << endl
-		 << "4. Salir"
-		 << "Ingrese la opcion que desea realizar";
-	cin >> opcion;
-	return opcion;
+	do{
+		cout << "*** Tipo de Producto ***" << endl
+			 << "1. Producto educativo" << endl
+			 << "2. Producto alcoholico" << endl
+			 << "3. Producto de lujo" << endl
+			 << "4. Salir"
+			 << "Ingrese la opcion que desea realizar";
+		cin >> opcion;
+		if(opcion>=1&&opcion<=4){
+			return opcion;
+		}else{
+			cout<<"Valor invalido!"<<endl;
+		}
+	while(true);
 }
 
 
