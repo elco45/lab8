@@ -73,7 +73,7 @@ int menu(){
 			 << "1. Agregar Clientes" << endl
 			 << "2. Agregar Productos" << endl
 			 << "3. Historial" << endl
-			 << "4. Salir"<<endl
+			 << "4. Salir" << endl
 			 << "Ingrese la opcion que desea realizar: ";
 		cin >> opcion;
 		if(opcion>=1&&opcion<=4){
