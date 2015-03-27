@@ -16,8 +16,8 @@ int main(int argc, char const *argv[])
 {
 	srand(time(0));
 
-	vector<Productos> lp;
-	vector<Cliente> lc;
+	vector<Productos*> lp;
+	vector<Cliente*> lc;
 
 	int opcion = menu();
 
@@ -81,7 +81,7 @@ int menu(){
 }
 
 int tipoP(){
-	int opcion;
+	int tipo;
 	do{
 		cout << "*** Tipo de Producto ***" << endl
 			 << "1. Producto educativo" << endl
