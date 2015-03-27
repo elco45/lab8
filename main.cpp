@@ -28,7 +28,7 @@ int main(int argc, char const *argv[])
 			string num;
 			for (int i = 0; i < 100; i++){
 				num=i+"";
-				lc.push_back(new cliente(num));
+				lc.push_back(new Cliente(num));
 			}
 		}else if(opcion == 2){//Agregar Productos
 			int random = rand() % lc.size();
@@ -82,7 +82,7 @@ int menu(){
 }
 
 int tipoP(){
-	int tipo;
+	int opcion;
 	do{
 		cout << "*** Tipo de Producto ***" << endl
 			 << "1. Producto educativo" << endl
@@ -96,7 +96,7 @@ int tipoP(){
 		}else{
 			cout<<"Valor invalido!"<<endl;
 		}
-	while(true);
+	}while(true);
 }
 
 
