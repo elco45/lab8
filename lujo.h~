@@ -1,14 +1,14 @@
-#ifndef EDUCATIVO_H
-#define EDUCATIVO_H
+#ifndef LUJO_H
+#define LUJO_H
 #include "cliente.h"
 #include "productos.h"
  using namespace std;
- class Educativo: public Productos{
+ class Lujo: public Productos{
  	double tasa;
  public:
- 	Educativo(double,double,cliente,double,double);
- 	Educativo(Educativo&);
- 	~Educativo();
+ 	Lujo(double,double,cliente,double,double);
+ 	Lujo(Lujo&);
+ 	~Lujo();
  	virtual string toString()const;
  	virtual void cobrar_Impuesto()const;
 
