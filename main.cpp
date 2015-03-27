@@ -28,20 +28,19 @@ int main(int argc, char const *argv[])
 			string num;
 			for (int i = 0; i < 100; i++){
 				num=i+"";
-				lc.push_back(new cliente(num));
+				lc.push_back(new Cliente(num));
 			}
 		}else if(opcion == 2){//Agregar Productos
 			int random = rand() % lc.size();
 			double volumen, precio, tasa, peso;
-			Cliente persona;
+			Cliente persona = lc.at(random);
 			cout << "Volumen: ";
 			cin >> volumen;
 			cout << "Peso: ";
 			cin >> peso;
 			cout << "Precio: ";
-			cin >> precio;		
-			persona = lc.at(random);
-			int type = tipo();
+			cin >> precio;
+			int type = tipoP();
 			if (type == 1){//Producto Educativo
 				cout << "Tasa: ";
 				cin >> tasa;
@@ -90,9 +89,9 @@ int tipoP(){
 			 << "3. Producto de lujo" << endl
 			 << "4. Salir"
 			 << "Ingrese la opcion que desea realizar";
-		cin >> opcion;
-		if(opcion>=1&&opcion<=4){
-			return opcion;
+		cin >> tipo;
+		if(tipo>=1&&tipo<=4){
+			return tipo;
 		}else{
 			cout<<"Valor invalido!"<<endl;
 		}
