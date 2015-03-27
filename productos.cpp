@@ -19,3 +19,12 @@ string Productos::toString()const{
 	ss << "Producto \nVolumen: " << volumen << "\nPeso: " << peso << "\nNombre del Cliente: " << nombre.getNombre() << "\nPrecio: " << precio << "\n";
 	return ss.str();
 }
+double Productos::getVolumen()const{
+	return volumen;
+}
+double Productos::getPeso()const{
+	return peso;
+}
+double Productos::getPrecio()const{
+	return precio;
+}
