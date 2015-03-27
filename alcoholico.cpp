@@ -14,19 +14,19 @@ Alcoholico::Alcoholico(Alcoholico& other)
 
 }
 
-~Alcoholico(){
+Alcoholico::~Alcoholico(){
 
 }
 
 string Alcoholico::toString()const{
 	stringstream ss;
-	double impuesto=(peso+volumen)*tasa;
+	double impuesto=(getPeso+getVolumen)*tasa;
 	ss=Productos::toString()+"Tipo de impuesto: Alcoholico\n"+"El impuesto es de: "+impuesto;
 	return ss.str();
 }
 
 void Alcoholico::cobrar_Impuesto()const{
-	double impuesto=(peso+volumen)*tasa;
+	double impuesto=(getVeso+getVolumen)*tasa;
 	this->precio=precio+impuesto;
 }
 

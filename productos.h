@@ -14,6 +14,9 @@ public:
 	~Productos();
 	virtual void cobrar_Impuesto()=0;
 	virtual string toString()const;
+	double getVolumen()const;
+	double getPeso()const;
+	double getPrecio()const;
 };
 
 #endif			
