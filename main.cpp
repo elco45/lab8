@@ -28,17 +28,18 @@ int main(int argc, char const *argv[])
 			
 		}else if(opcion == 2){//Agregar Productos
 			double volumen, precio, tasa, peso;
+			Cliente persona;
 			cout << "Volumen: ";
 			cin >> volumen;
 			cout << "Peso: ";
 			cin >> peso;
 			cout << "Precio: ";
-			cin >> precio;			
-
-
+			cin >> precio;		
 
 			int type = tipo();
 			if (type == 1){//Producto Educativo
+				cout << "Tasa: ";
+				cin >> tasa;
 
 			}else if(type == 2){//Producto alcoholico
 				
