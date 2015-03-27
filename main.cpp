@@ -19,17 +19,17 @@ int main(int argc, char const *argv[])
 	vector<Productos*> lp;
 	vector<Cliente*> lc;
 
-	int opcion = menu();
+	
 
-	do
-	{
-
+	do{
+		int opcion = menu();
 		if (opcion == 1){//Agregar Clientes
 			string num;
 			for (int i = 0; i < 100; i++){
 				num=i+"";
 				lc.push_back(new Cliente(num));
 			}
+			cout<<"Se ha ingresado 100 clientes!"<<endl<<endl;
 		}else if(opcion == 2){//Agregar Productos
 			int random = rand() % lc.size();
 			double volumen, precio, tasa, peso;
@@ -56,8 +56,10 @@ int main(int argc, char const *argv[])
 			}
 		}else if(opcion == 3){//Historial
 
+		}else{
+			break;
 		}
-	} while (opcion <= 3);
+	} while (true);
 
 	return 0;
 }
@@ -70,7 +72,7 @@ int menu(){
 			 << "2. Agregar Productos" << endl
 			 << "3. Historial" << endl
 			 << "4. Salir" << endl
-			 << "Ingrese la opcion que desea realizar";
+			 << "Ingrese la opcion que desea realizar: ";
 		cin >> opcion;
 		if(opcion>=1&&opcion<=4){
 			return opcion;
@@ -87,8 +89,8 @@ int tipoP(){
 			 << "1. Producto educativo" << endl
 			 << "2. Producto alcoholico" << endl
 			 << "3. Producto de lujo" << endl
-			 << "4. Salir"
-			 << "Ingrese la opcion que desea realizar";
+			 << "4. Salir"<<endl
+			 << "Ingrese la opcion que desea realizar: ";
 		cin >> tipo;
 		if(tipo>=1&&tipo<=4){
 			return tipo;
