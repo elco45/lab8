@@ -5,10 +5,10 @@
 #include <string>
 
 using namespace std;
-Lujo::Lujo(double volumen, double peso, Cliente cliente, 
-	double precio, double tasa): Productos(volumen, peso, cliente, precio),tasa(tasa){
+Lujo::Lujo(double volumen, double peso, Cliente nombre, 
+	double precio, double tasa): Productos(volumen, peso, nombre, precio),tasa(tasa){
 }
-Lujo::Lujo(Lujo& other): Productos(other),tasa(tasa){}
+Lujo::Lujo(Lujo& other): Productos(other),tasa(other.tasa){}
 
 
 string Lujo::toString()const{
@@ -17,9 +17,9 @@ string Lujo::toString()const{
 	ss<<Productos::toString()<<"Tipo de impuesto: Lujo\n El impuesto es: "<<impuesto;
 }
 
-void Lujo::cobrar_Impuesto()const{
+void Lujo::cobrar_Impuesto(){
 	double impuesto;
 	impuesto=(getVolumen()*tasa)+(getPeso()*tasa);
-	seetPrecio((precio+impuesto));
+	Productos::setPrecio((getprecio()+impuesto));
 	
 }

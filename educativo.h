@@ -6,11 +6,11 @@
  class Educativo: public Productos{
  	double tasa;
  public:
- 	Educativo(double,double,cliente,double,double);
+ 	Educativo(double,double,Cliente,double,double);
  	Educativo(Educativo&);
  	~Educativo();
  	virtual string toString()const;
- 	virtual void cobrar_Impuesto()const;
+ 	virtual void cobrar_Impuesto();
 
  };
  #endif
