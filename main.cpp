@@ -87,7 +87,7 @@ int menu(){
 			 << "4. Salir"<<endl
 			 << "Ingrese la opcion que desea realizar: ";
 		cin >> opcion;
-		if(opcion>=1&&opcion<=5){
+		if(opcion>=1&&opcion<=4){
 			return opcion;
 		}else{
 			cout<<"Valor invalido!"<<endl;
