@@ -15,10 +15,11 @@ string Educativo::toString()const{
 	stringstream ss;
 	double impuesto=(getVolumen()*tasa);
 	ss<<Productos::toString()<<"Tipo de impuesto: Educativo\n El impuesto es: "<<impuesto;
+	return ss.str();
 }
 
 void Educativo::cobrar_Impuesto(){
 	double impuesto=(getVolumen()*tasa);
-	Productos::setPrecio(impuesto);
+	setPrecio(impuesto);
 	
 }

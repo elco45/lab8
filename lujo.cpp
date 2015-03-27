@@ -13,13 +13,14 @@ Lujo::Lujo(Lujo& other): Productos(other),tasa(other.tasa){}
 
 string Lujo::toString()const{
 	stringstream ss;
-	double impuesto=(getVolumen()*tasa)+(getpeso()*tasa);
+	double impuesto=(getVolumen()*tasa)+(getPeso()*tasa);
 	ss<<Productos::toString()<<"Tipo de impuesto: Lujo\n El impuesto es: "<<impuesto;
+	return ss.str();
 }
 
 void Lujo::cobrar_Impuesto(){
 	double impuesto;
 	impuesto=(getVolumen()*tasa)+(getPeso()*tasa);
-	Productos::setPrecio(impuesto));
+	setPrecio(impuesto);
 	
 }
