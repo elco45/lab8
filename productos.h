@@ -7,9 +7,9 @@ using std::string;
 
 class Productos{
 	double volumen, peso, precio;
-	Cliente nombre;
+	Cliente* nombre;
 public:
-	Productos(double, double, Cliente, double);
+	Productos(double, double, Cliente*, double);
 	Productos(Productos&);
 	~Productos();
 	virtual void cobrar_Impuesto()=0;

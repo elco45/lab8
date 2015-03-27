@@ -4,7 +4,7 @@
 #include <string>
 #include <sstream>
 
-Alcoholico::Alcoholico(double volumen,double peso,Cliente c,double precio,double tasa)
+Alcoholico::Alcoholico(double volumen,double peso,Cliente* c,double precio,double tasa)
 	:Productos(volumen,peso,c,precio),tasa(tasa){
 	
 }

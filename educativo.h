@@ -6,7 +6,7 @@
  class Educativo: public Productos{
  	double tasa;
  public:
- 	Educativo(double,double,Cliente,double,double);
+ 	Educativo(double,double,Cliente*,double,double);
  	Educativo(Educativo&);
  	~Educativo();
  	virtual string toString()const;

@@ -8,7 +8,7 @@ using namespace std;
 class Alcoholico: public Productos{
 	double tasa;
 public:
-	Alcoholico(double,double,Cliente,double,double);//volumen,peso,cliente,precio,tasa
+	Alcoholico(double,double,Cliente*,double,double);//volumen,peso,cliente,precio,tasa
 	Alcoholico(Alcoholico&);
 	~Alcoholico();
 	virtual string toString()const;

@@ -5,7 +5,7 @@
 using namespace std;
 
 
-Educativo::Educativo(double volumen, double peso, Cliente nombre, 
+Educativo::Educativo(double volumen, double peso, Cliente* nombre, 
 	double precio, double tasa): Productos(volumen, peso, nombre, precio),tasa(tasa){
 }
 Educativo::Educativo(Educativo& other): Productos(other),tasa(other.tasa){}
