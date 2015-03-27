@@ -31,6 +31,7 @@ int main(int argc, char const *argv[])
 				lc.push_back(new cliente(num));
 			}
 		}else if(opcion == 2){//Agregar Productos
+			int random = rand() % lc.size();
 			double volumen, precio, tasa, peso;
 			Cliente persona;
 			cout << "Volumen: ";
@@ -39,17 +40,20 @@ int main(int argc, char const *argv[])
 			cin >> peso;
 			cout << "Precio: ";
 			cin >> precio;		
-
+			persona = lc.at(random);
 			int type = tipo();
 			if (type == 1){//Producto Educativo
 				cout << "Tasa: ";
 				cin >> tasa;
-
+				lp.push_back(new Educativo(volumen, peso, persona, precio, tasa));
 			}else if(type == 2){//Producto alcoholico
-				
-
+				cout << "Tasa: ";
+				cin >> tasa;
+				lp.push_back(new Alcoholico(volumen, peso, persona, precio, tasa));
 			}else if(type == 3){//Producto de lujo
-
+				cout << "Tasa: ";
+				cin >> tasa;
+				lp.push_back(new Lujo(volumen, peso, persona, precio, tasa));
 			}
 		}else if(opcion == 3){//Historial
 
