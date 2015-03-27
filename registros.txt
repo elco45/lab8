@@ -1,14 +1,9 @@
 Producto 
 Volumen: 1
 Peso: 1
-Nombre del Cliente: 23
+Nombre del Cliente: 48
 Precio: 1
 Tipo de impuesto: Educativo
- El impuesto es: 1
-Producto 
-Volumen: 2
-Peso: 2
-Nombre del Cliente: 8
-Precio: 2
-Tipo de impuesto: Alcoholico
-El impuesto es de: 8
+ El impuesto es: 3
+El precio con impuesto es: 4
+

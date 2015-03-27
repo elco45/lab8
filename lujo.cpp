@@ -15,6 +15,7 @@ string Lujo::toString()const{
 	stringstream ss;
 	double impuesto=(getVolumen()*tasa)+(getPeso()*tasa);
 	ss<<Productos::toString()<<"Tipo de impuesto: Lujo\n El impuesto es: "<<impuesto;
+	ss<<"\nEl precio con impuesto es: "<<getPrecio()+impuesto;
 	return ss.str();
 }
 

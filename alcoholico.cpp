@@ -22,6 +22,7 @@ string Alcoholico::toString()const{
 	stringstream ss;
 	double impuesto=(getPeso()+getVolumen())*tasa;
 	ss<<Productos::toString()<<"Tipo de impuesto: Alcoholico\n"<<"El impuesto es de: "<<impuesto;
+	ss<<"\nEl precio con impuesto es: "<<getPrecio()+impuesto;
 	return ss.str();
 }
 
