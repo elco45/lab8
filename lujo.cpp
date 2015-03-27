@@ -19,7 +19,7 @@ string Lujo::toString()const{
 
 void Lujo::cobrar_Impuesto()const{
 	double impuesto;
-	impuesto=(volumen*tasa)+(peso*tasa);
-	this->precio=precio+impuesto;
+	impuesto=(getVolumen()*tasa)+(getPeso()*tasa);
+	seetPrecio((precio+impuesto));
 	
 }
