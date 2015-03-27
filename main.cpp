@@ -57,14 +57,20 @@ int main(int argc, char const *argv[])
 
 int menu(){
 	int opcion;
-	cout << "****** Menu ******" << endl
-		 << "1. Agregar Clientes" << endl
-		 << "2. Agregar Productos" << endl
-		 << "3. Historial" << endl
-		 << "4. Salir"
-		 << "Ingrese la opcion que desea realizar";
-	cin >> opcion;
-	return opcion;
+	do{
+		cout << "****** Menu ******" << endl
+			 << "1. Agregar Clientes" << endl
+			 << "2. Agregar Productos" << endl
+			 << "3. Historial" << endl
+			 << "4. Salir"
+			 << "Ingrese la opcion que desea realizar";
+		cin >> opcion;
+		if(opcion>=1&&opcion<=4){
+			return opcion;
+		}else{
+			cout<<"Valor invalido!"<<endl;
+		}
+	}
 }
 
 int tipoP(){
