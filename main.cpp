@@ -56,6 +56,7 @@ int main(int argc, char const *argv[])
 			}
 		}else if(opcion == 3){//Historial
 
+
 		}
 	} while (opcion <= 3);
 
