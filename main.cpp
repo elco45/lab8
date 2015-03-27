@@ -7,6 +7,9 @@
 #include "educativo.h"
 #include "lujo.h"
 #include "cliente.h"
+#include <fstream>
+#include <string>
+#include <sstream>
 using namespace std;
 
 int menu();
@@ -24,10 +27,11 @@ int main(int argc, char const *argv[])
 	do{
 		int opcion = menu();
 		if (opcion == 1){//Agregar Clientes
-			string num;
+			
 			for (int i = 0; i < 100; i++){
-				num=i+"";
-				lc.push_back(new Cliente(num));
+				stringstream num;
+				num << i;
+				lc.push_back(new Cliente(num.str()));
 			}
 			cout<<"Se ha ingresado 100 clientes!"<<endl<<endl;
 		}else if(opcion == 2){//Agregar Productos
@@ -53,8 +57,16 @@ int main(int argc, char const *argv[])
 				cout << "Tasa: ";
 				cin >> tasa;
 				lp.push_back(new Lujo(volumen, peso, persona, precio, tasa));
+			}else{
+				break;
 			}
 		}else if(opcion == 3){//Historial
+			ofstream salida("registros.txt",ios::out);
+			for(int i=0; i<lp.size(); i++){
+				//Productos* temporal=lp.at;
+				salida<<lp.at(i)->toString()<<endl<<endl;
+			}
+			salida.close();
 
 
 		}else{
@@ -73,10 +85,10 @@ int menu(){
 			 << "1. Agregar Clientes" << endl
 			 << "2. Agregar Productos" << endl
 			 << "3. Historial" << endl
-			 << "4. Salir" << endl
+			 << "4. Salir"<<endl
 			 << "Ingrese la opcion que desea realizar: ";
 		cin >> opcion;
-		if(opcion>=1&&opcion<=4){
+		if(opcion>=1&&opcion<=5){
 			return opcion;
 		}else{
 			cout<<"Valor invalido!"<<endl;
