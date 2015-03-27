@@ -63,11 +63,10 @@ int main(int argc, char const *argv[])
 		}else if(opcion == 3){//Historial
 			ofstream salida("registros.txt",ios::out);
 			for(int i=0; i<lp.size(); i++){
-				//Productos* temporal=lp.at;
 				salida<<lp.at(i)->toString()<<endl<<endl;
 			}
 			salida.close();
-
+			cout<<"Se ha creado un archivo de texto, chequee en el folder"<<endl;
 
 		}else{
 			break;
